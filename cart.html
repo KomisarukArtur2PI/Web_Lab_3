@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+    <script src="slider.js"></script>
+    <title>Список товарів та корзина</title>
+</head>
+ <header>
+            <div class="topnav" id="myTopnav">
+                <a href="index.html" >Головна</a>
+                <a href="slider.html">Покоління GT-R</a>
+                <a href="cart.html" class="active">Купити GT-R</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction1()">&#9776;</a>
+            </div>
+    </header>
+<body>
+    <h1>Список товарів</h1>
+         <div class="filter-container">
+            <div class="filters">
+                <label for="category-select" style="color: white;">Категорія:</label>
+                    <select id="category-select" class="filter-button">
+                <option value="all">Усі</option>
+                <option value="category1" class="f">До 500 кс</option>
+                <option value="category2">Від 500 кс</option>
+            </select>
+
+            <label for="sort-select" class="filter-text">Сортування:</label>
+                <select id="sort-select" class="filter-button">
+                    <option value="price-asc">Ціна (за зростанням)</option>
+                    <option value="price-desc">Ціна (за спаданням)</option>
+                </select>
+            </div>
+        </div>
+
+
+    <section class="products">
+        <div class="product" data-category="category1" data-price="140000">
+            <img src="images/r31.jpg">
+                <h3>Nissan R31</h3>
+                    <p class="product-price">140000 грн</p>
+                    <label for="quantity-1">Кількість:</label>
+                 <input type="number" id="quantity-1" class="quantity" value="1" min="1"><br><br>
+            <button class="add-to-cart" data-name="Nissan R31" data-price="140000">Додати до корзини</button>
+        </div>
+        <div class="product" data-category="category1" data-price="240000">
+            <img src="images/r32.jpg">
+                <h3>Nissan R32</h3>
+                    <p class="product-price">240000 грн</p>
+                    <label for="quantity-1">Кількість:</label>
+                 <input type="number" id="quantity-1" class="quantity" value="1" min="1"><br><br>
+            <button class="add-to-cart" data-name="Nissan R32" data-price="24000">Додати до корзини</button>
+        </div>
+        <div class="product" data-category="category1" data-price="340000">
+            <img src="images/r33.jpg">
+                <h3>Nissan R33</h3>
+                    <p class="product-price">340000 грн</p>
+                    <label for="quantity-1">Кількість:</label>
+                 <input type="number" id="quantity-1" class="quantity" value="1" min="1"><br><br>
+            <button class="add-to-cart" data-name="Nissan R33" data-price="340000">Додати до корзини</button>
+        </div>
+         <div class="product" data-category="category2" data-price="1340000">
+            <img src="images/r34.jpg">
+                <h3>Nissan R34</h3>
+                    <p class="product-price">1340000 грн</p>
+                    <label for="quantity-1">Кількість:</label>
+                 <input type="number" id="quantity-1" class="quantity" value="1" min="1"><br><br>
+            <button class="add-to-cart" data-name="Nissan R34" data-price="1340000">Додати до корзини</button>
+        </div>
+         <div class="product" data-category="category2" data-price="2340000">
+            <img src="images/r35.jpg">
+                <h3>Nissan R35</h3>
+                    <p class="product-price">2340000 грн</p>
+                    <label for="quantity-1">Кількість:</label>
+                 <input type="number" id="quantity-1" class="quantity" value="1" min="1"><br><br>
+            <button class="add-to-cart" data-name="Nissan R35" data-price="2340000">Додати до корзини</button>
+        </div>
+
+
+
+        <!-- Додайте інші товари за аналогічним шаблоном -->
+    </section>
+
+    <h2>Корзина<span id="cart-count">0</span></h2>
+  
+
+    <!-- Корзина (початково прихована) -->
+    <div class="cart-container">
+        <ul class="cart-items">
+        <!-- Вміст корзини буде вставлений тут через JavaScript -->
+        </ul>
+            <p>Загальна сума: <span id="total-amount">0 грн</span></p>
+        <button id="clear-cart">Очистити корзину</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

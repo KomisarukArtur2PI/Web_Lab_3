@@ -1,0 +1,102 @@
+/* Стилі для загального вигляду */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.slider {
+    width: 100%;
+    max-width: 1000px; /* Задайте максимальну ширину контейнера на ПК */
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.slide {
+    width: 100%;
+    height: auto; /* Змініть висоту на 'auto', щоб вона пристосовувалася до вмісту */
+    display: none;
+    text-align: center;
+    position: relative; /* Додайте позицію relative для внутрішнього контейнера */
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto; /* Автоматична адаптація висоти */
+    object-fit: cover;
+}
+
+.banner {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    text-align: left;
+    transition: background-color 0.3s ease; /* Додайте плавну анімацію зміни кольору фону */
+}
+
+/* Стилі для тексту на телефонах */
+@media (max-width: 768px) {
+    .slide .banner {
+        background-color: rgba(0, 0, 0, 0.9); /* Збільште прозорість фону для кращої читабельності */
+        padding: 10px;
+        text-align: center;
+    }
+    .slide h2 {
+        font-size: 0.6rem; /* Зменште розмір заголовку */
+    }
+    .slide p {
+        font-size: 0.6rem; /* Зменште розмір тексту */
+    }
+}
+
+.active {
+    display: block;
+    animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+    10%, 90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Медіа-запит для мобільних пристроїв */
+@media (max-width: 768px) {
+    .slider {
+        max-width: 100%; /* Розтягнути на весь екран на мобільних пристроях */
+    }
+}
